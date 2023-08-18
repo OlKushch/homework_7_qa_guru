@@ -4,9 +4,9 @@ import xlrd
 from tests.conftest import joined_path
 # TODO оформить в тест, добавить ассерты и использовать универсальный путь
 
-def book_workbook():
-    book = xlrd.open_workbook(os.path.join(joined_path,'file_example_XLS_10.xls'))
 
+def test_book_workbook():
+    book = xlrd.open_workbook(os.path.join(joined_path,'file_example_XLS_10.xls'))
     print(f'Количество листов {book.nsheets}')
     print(f'Имена листов {book.sheet_names()}')
     sheet = book.sheet_by_index(0)

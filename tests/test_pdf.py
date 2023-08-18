@@ -2,6 +2,8 @@ import pypdf
 import os
 from tests.conftest import joined_path
 # TODO оформить в тест, добавить ассерты и использовать универсальный путь
+
+
 def test_reader_pdf():
     reader = pypdf.PdfReader(os.path.join(joined_path, 'docs-pytest-org-en-latest.pdf'))
     number_of_pages = len(reader.pages)
