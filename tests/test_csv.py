@@ -10,7 +10,7 @@ def test_write_csv():
         csvwriter.writerow(['Bonny', 'Born', 'Peter'])
         csvwriter.writerow(['Alex', 'Serj', 'Yana'])
 
-    with open('resources/new_csv.csv') as csv_file:
+    with open(os.path.join(joined_path, 'new_csv.csv')) as csv_file:
         csvreader = csv.reader(csv_file, delimiter=';')
         csv_list = []
         for row in csvreader:
